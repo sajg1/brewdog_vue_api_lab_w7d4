@@ -1,27 +1,30 @@
 <template lang="html">
   <div id="app">
-    <!-- <router-link :to="{ name: 'home'}">Home</router-link>
-    <beers-list :beers="beers"></beers-list> -->
+    <nav>
+    <router-link :to="{ name: 'home'}">Home</router-link>
+    <router-link :to="{ name: 'beers'}">Beers</router-link>
+    </nav>
     <router-view id="view"></router-view>
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'app',
-  data() {
-    return {
-      beers: {}
-    }
-  },
-  mounted(){
-    fetch('https://api.punkapi.com/v2/beers')
-    .then(res => res.json())
-    .then(beers => this.beers=beers)
-  },
+  name: 'app'
 }
 </script>
 
 
 <style lang="css" scoped>
+  nav {
+    display: flex;
+    justify-content: left;
+    width: 50vw;
+    margin: 0 auto;
+  }
+
+  a {
+  margin: 0 20px;
+}
 </style>

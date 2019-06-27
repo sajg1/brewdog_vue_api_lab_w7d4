@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <Header title='Home'></Header>
+    <Header title='BrewDog Beers'></Header>
   </div>
 </template>
 
