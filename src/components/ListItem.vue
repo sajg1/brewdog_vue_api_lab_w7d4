@@ -3,12 +3,14 @@
 </template>
 
 <script>
+
+import { eventBus } from '../main.js';
 export default {
   name: "list-item",
   props: ['beer'],
   methods: {
     handleClick() {
-      
+      eventBus.$emit('beer-select', this.beer)
     }
   }
 }
